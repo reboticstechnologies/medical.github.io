@@ -1,145 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Rebotics Medical & Education Trust</title>
-  <link rel="stylesheet" href="/assets/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Rebotics Medical & Education Trust</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Shared CSS across all pages */
+        :root { --primary: #004a99; --secondary: #00a8e8; --light: #f4f7f6; --dark: #333; --white: #fff; }
+        body { font-family: 'Arial', sans-serif; margin: 0; background: var(--light); color: var(--dark); }
+        nav { background: var(--white); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .logo { font-weight: bold; color: var(--primary); font-size: 1.2rem; }
+        nav ul { list-style: none; display: flex; margin: 0; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { text-decoration: none; color: var(--dark); font-weight: 500; }
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1531746790731-6c087fecd05a?auto=format&fit=crop&q=80&w=1000'); height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center; }
+        section { padding: 50px 10%; }
+        footer { background: var(--primary); color: white; text-align: center; padding: 20px 0; margin-top: 50px; }
+        .btn { background: var(--secondary); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; }
+    </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap site-header-inner">
-      <a class="brand" href="/">
-        <span class="brand-mark">R</span>
-        <span>Rebotics Medical &amp; Education Trust</span>
-      </a>
-      <nav class="main-nav">
-        <a href="/" class="active">Home</a>
-        <a href="/about.html">About Us</a>
-        <a href="/activities.html">Activities</a>
-        <a href="/donate.html">Donate</a>
-        <a href="/contact.html">Contact</a>
-        <a href="/terms.html">Terms</a>
-      </nav>
+    <nav>
+        <div class="logo">REBOTICS TRUST</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="works.html">Trust Works</a></li>
+            <li><a href="donation.html">Donation</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero">
+        <h1>Innovating for Humanity</h1>
+        <p>Using Robotics to transform Healthcare and Education.</p>
+        <br>
+        <a href="donation.html" class="btn">Support Our Mission</a>
     </div>
-  </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="hero-inner">
-        <div>
-          <div class="hero-kicker">Healthcare • Education • Research</div>
-          <h1>Promoting healthcare &amp; medical education for every community.</h1>
-          <p class="hero-lead">
-            Rebotics Medical &amp; Education Trust works to expand access to quality healthcare,
-            train medical personnel, and support community health programs — with a special focus
-            on underprivileged and rural populations.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="/donate.html">Donate &amp; Support</a>
-            <a class="btn btn-outline" href="/about.html">Learn more about us</a>
-          </div>
-          <div class="hero-badge-row">
-            <span>✔ Community health camps</span>
-            <span>✔ Medical training &amp; scholarships</span>
-            <span>✔ Rural health outreach</span>
-          </div>
-        </div>
-
-        <aside class="hero-panel">
-          <h2>Impact snapshot</h2>
-          <p style="font-size:0.9rem;color:#6c757d;margin:0 0 6px;">
-            A glimpse of the kind of work your support can power.
-          </p>
-          <div class="hero-stat-grid">
-            <div class="stat-pill">
-              <strong>Health camps</strong>
-              <span>Regular community health &amp; screening camps.</span>
-            </div>
-            <div class="stat-pill">
-              <strong>Training</strong>
-              <span>Workshops for paramedics &amp; healthcare workers.</span>
-            </div>
-            <div class="stat-pill">
-              <strong>Scholarships</strong>
-              <span>Support for medical &amp; allied health students.</span>
-            </div>
-            <div class="stat-pill">
-              <strong>Research</strong>
-              <span>Initiatives that improve real-world health outcomes.</span>
-            </div>
-          </div>
-        </aside>
-      </div>
+    <section>
+        <h2>Welcome to Rebotics Medical & Education Trust</h2>
+        <p>We are a non-profit organization dedicated to bringing advanced technology to the grassroots level. Our focus lies in medical accessibility and modernizing educational tools through robotics.</p>
     </section>
 
-    <section class="section">
-      <div class="section-header">
-        <h2>Our Mission</h2>
-        <p>Building capacity in healthcare &amp; medical education.</p>
-      </div>
-      <div class="card-grid">
-        <article class="card">
-          <h3>Strengthen healthcare delivery</h3>
-          <p>Support hospitals, clinics and field programs that serve underserved populations and bring essential health services closer to people.</p>
-        </article>
-        <article class="card">
-          <h3>Train medical personnel</h3>
-          <p>Design and support training programs, workshops and scholarships that equip healthcare workers with relevant skills.</p>
-        </article>
-        <article class="card">
-          <h3>Promote community health</h3>
-          <p>Conduct awareness campaigns, preventive health drives and regular screening camps focusing on vulnerable groups.</p>
-        </article>
-        <article class="card">
-          <h3>Enable research &amp; innovation</h3>
-          <p>Encourage practical research, pilots and collaborations that can improve healthcare access and outcomes.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-header">
-        <h2>Upcoming Activities</h2>
-        <p>A snapshot of the programs we are planning.</p>
-      </div>
-      <ul class="timeline">
-        <li>
-          <strong>Monthly community health camp</strong>
-          Primary care consultations, basic diagnostics and referrals in rural &amp; peri‑urban areas.
-        </li>
-        <li>
-          <strong>Medical training workshops</strong>
-          Hands‑on workshops for paramedics, nurses and frontline health workers.
-        </li>
-        <li>
-          <strong>Scholarships &amp; mentorship</strong>
-          Support for deserving students pursuing medical and allied health education.
-        </li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <div class="section-header">
-        <h2>Documents &amp; transparency</h2>
-        <p>Registration and compliance documents are available for public view.</p>
-      </div>
-      <p>
-        We believe in responsible, transparent use of funds. Core documents like the Trust Deed,
-        registration certificates and compliance filings can be shared on request.
-      </p>
-      <p>
-        To request copies, please email
-        <a href="mailto:medicaltrust2025@gmail.com">medicaltrust2025@gmail.com</a>.
-      </p>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap site-footer-inner">
-      <span>© Rebotics Medical &amp; Education Trust</span>
-      <span>Contact: <a href="mailto:medicaltrust2025@gmail.com">medicaltrust2025@gmail.com</a></span>
-    </div>
-  </footer>
+    <footer>
+        <p>&copy; 2025 Rebotics Medical & Education Trust</p>
+    </footer>
 </body>
 </html>
