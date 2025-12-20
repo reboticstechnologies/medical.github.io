@@ -1,0 +1,8 @@
+body{margin:0;font-family:Arial;background:#000814;color:#e0f7ff}
+header{background:#001d3d;padding:20px}
+nav a{color:#00e5ff;margin-right:15px;text-decoration:none}
+.container{padding:40px}
+.hero{text-align:center;padding:80px;background:#003566}
+.card{background:#001d3d;padding:20px;margin:20px 0;border-radius:10px}
+.button{background:#00e5ff;color:#001d3d;padding:12px 25px;border-radius:25px;text-decoration:none}
+footer{text-align:center;padding:15px;background:#000814}
