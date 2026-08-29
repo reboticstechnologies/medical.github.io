@@ -1,18 +1,11 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Home | Rebotics Medical & Education Trust</title><meta name="description" content="Rebotics Medical & Education Trust - medical, education and community initiatives.">
-<link rel="stylesheet" href="style.css"></head><body>
-<header><div class="container navbar"><a class="brand" href="index.html"><span class="logo">🤖</span><span>Rebotics Medical & Education Trust</span></a>
-<button class="menu" aria-label="Open menu">☰</button>
-<nav class="nav">
-<a href="index.html">Home</a><a href="about.html">About</a><a href="activities.html">Activities</a><a href="medical.html">Medical</a><a href="education.html">Education</a><a href="gallery.html">Gallery</a><a href="volunteer.html">Volunteer</a><a href="donate.html">Donate</a><a href="contact.html">Contact</a>
-</nav></div></header>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Donate to Rebotics Medical and Education Trust and support our medical, education, community and social initiatives.">
-  <title>Donate | Rebotics Medical and Education Trust</title>
+  <meta name="description" content="Donate to Rebotics Medical and Education Trust through SBI, UPI or Razorpay.">
+  <title>Donate | Rebotics Medical & Education Trust</title>
+
   <style>
     :root {
       --primary: #0b5cab;
@@ -23,9 +16,10 @@
       --text: #17212b;
       --muted: #617080;
       --border: #dce6ef;
-      --success: #137a53;
     }
+
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -33,52 +27,80 @@
       background: var(--bg);
       line-height: 1.6;
     }
+
     header {
       background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-      color: white;
-      padding: 28px 20px;
+      color: #fff;
+      padding: 18px 20px;
     }
-    .nav {
-      max-width: 1100px;
+
+    .navbar {
+      max-width: 1150px;
       margin: auto;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 20px;
     }
-    .brand { font-size: 1.2rem; font-weight: 700; }
-    nav a {
-      color: white;
+
+    .brand {
+      color: #fff;
       text-decoration: none;
-      margin-left: 18px;
-      font-size: .95rem;
+      font-size: 1.1rem;
+      font-weight: 700;
     }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 16px;
+      font-size: .94rem;
+    }
+
+    nav a:hover { text-decoration: underline; }
+
     .hero {
-      max-width: 1100px;
-      margin: 0 auto;
+      max-width: 1000px;
+      margin: auto;
       padding: 55px 20px 30px;
       text-align: center;
     }
-    .hero h1 { margin: 0 0 12px; font-size: clamp(2rem, 5vw, 3.3rem); }
-    .hero p { max-width: 760px; margin: auto; color: var(--muted); font-size: 1.08rem; }
+
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: var(--primary-dark);
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
     .container {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: auto;
       padding: 20px;
     }
+
     .notice {
       background: #fff8e6;
       border: 1px solid #f0d58b;
       border-radius: 14px;
       padding: 16px 18px;
-      margin: 0 0 22px;
+      margin-bottom: 24px;
     }
+
     .notice strong { color: #765700; }
+
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 22px;
     }
+
     .card {
       background: var(--card);
       border: 1px solid var(--border);
@@ -86,13 +108,19 @@
       padding: 28px;
       box-shadow: 0 8px 28px rgba(22, 47, 71, .07);
     }
-    .card h2 { margin-top: 0; color: var(--primary-dark); }
+
+    .card h2 {
+      margin-top: 0;
+      color: var(--primary-dark);
+    }
+
     .account {
       margin-top: 18px;
       border: 1px solid var(--border);
       border-radius: 12px;
       overflow: hidden;
     }
+
     .row {
       display: flex;
       justify-content: space-between;
@@ -100,54 +128,86 @@
       padding: 13px 15px;
       border-bottom: 1px solid var(--border);
     }
+
     .row:last-child { border-bottom: 0; }
-    .label { color: var(--muted); font-weight: 600; }
-    .value { text-align: right; font-weight: 700; word-break: break-word; }
-    .copy {
+
+    .label {
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .value {
+      text-align: right;
+      font-weight: 700;
+      word-break: break-word;
+    }
+
+    button.copy {
       border: 0;
       border-radius: 7px;
       background: #eaf3fb;
       color: var(--primary-dark);
-      padding: 5px 8px;
-      margin-left: 7px;
+      padding: 6px 9px;
+      margin-left: 6px;
       cursor: pointer;
       font-weight: 700;
     }
-    .upi-box {
+
+    .upi-box,
+    .razorpay-box {
       text-align: center;
-      background: #eefaf7;
-      border: 1px solid #c9e9df;
       border-radius: 14px;
       padding: 22px;
       margin-top: 18px;
     }
+
+    .upi-box {
+      background: #eefaf7;
+      border: 1px solid #c9e9df;
+    }
+
+    .razorpay-box {
+      background: #f0f5ff;
+      border: 1px solid #cfddf4;
+    }
+
     .upi {
       display: inline-block;
       font-size: 1.05rem;
       font-weight: 700;
       padding: 10px 14px;
-      background: white;
+      background: #fff;
       border-radius: 8px;
       border: 1px solid #c9e9df;
       word-break: break-all;
     }
-    .button {
+
+    .donate-button {
       display: inline-block;
-      margin-top: 14px;
+      margin-top: 12px;
       background: var(--accent);
-      color: white;
+      color: #fff;
       text-decoration: none;
-      border: 0;
       border-radius: 9px;
-      padding: 11px 18px;
+      padding: 12px 22px;
       font-weight: 700;
-      cursor: pointer;
     }
-    ul { padding-left: 21px; }
+
+    .donate-button:hover { opacity: .9; }
+
+    .razorpay-button {
+      background: #528ff0;
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
     .important {
-      color: var(--success);
       font-weight: 700;
     }
+
     footer {
       margin-top: 45px;
       background: #102d46;
@@ -156,25 +216,48 @@
       padding: 25px 20px;
       font-size: .9rem;
     }
-    footer a { color: white; }
+
+    footer a { color: #fff; }
+
     @media (max-width: 760px) {
       .grid { grid-template-columns: 1fr; }
-      .nav { flex-direction: column; }
-      nav a { margin: 0 7px; }
-      .row { flex-direction: column; gap: 4px; }
+
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 7px;
+      }
+
+      .row {
+        flex-direction: column;
+        gap: 4px;
+      }
+
       .value { text-align: left; }
-      .copy { margin-left: 4px; }
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <div class="nav">
-    <div class="brand">Rebotics Medical and Education Trust</div>
-    <nav>
-      <a href="https://medical.rebotics.in/">Home</a>
-      <a href="https://rebotics.in/">Rebotics</a>
+  <div class="navbar">
+    <a class="brand" href="index.html">🤖 Rebotics Medical & Education Trust</a>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="activities.html">Activities</a>
+      <a href="medical.html">Medical</a>
+      <a href="education.html">Education</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="volunteer.html">Volunteer</a>
+      <a href="donate.html">Donate</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </div>
 </header>
@@ -182,7 +265,7 @@
 <section class="hero">
   <h1>Support Our Mission</h1>
   <p>
-    Your contribution can help Rebotics Medical and Education Trust support
+    Your contribution can help Rebotics Medical & Education Trust support
     medical, education, community and social initiatives.
   </p>
 </section>
@@ -190,140 +273,195 @@
 <main class="container">
 
   <div class="notice">
-    <strong>Important:</strong> Please verify the beneficiary name, account number
-    and IFSC code carefully before making any transfer. Donations should be made
-    only to the official account details published on this page.
+    <strong>Important:</strong>
+    Please verify the beneficiary name, account number and IFSC code before
+    making any transfer. Use only the official payment details published on
+    this page.
   </div>
 
   <div class="grid">
+
+    <!-- SBI BANK TRANSFER -->
     <section class="card">
       <h2>Donate by Bank Transfer</h2>
-      <p>Use the following official SBI account details for direct contribution.</p>
+      <p>Use the following SBI account details for direct contribution.</p>
 
       <div class="account">
+
         <div class="row">
           <span class="label">Account Name</span>
           <span class="value">Rebotics Medical and Education Trust</span>
         </div>
+
         <div class="row">
           <span class="label">Account Number</span>
           <span class="value">
-            <span id="accountNumber">44645371420</span>
+            44645371420
             <button class="copy" onclick="copyText('44645371420', this)">Copy</button>
           </span>
         </div>
+
         <div class="row">
           <span class="label">Bank</span>
           <span class="value">State Bank of India (SBI)</span>
         </div>
+
         <div class="row">
           <span class="label">Branch</span>
           <span class="value">Jigani, Bengaluru, Karnataka</span>
         </div>
+
         <div class="row">
           <span class="label">IFSC Code</span>
           <span class="value">
-            <span id="ifsc">SBIN0011355</span>
+            SBIN0011355
             <button class="copy" onclick="copyText('SBIN0011355', this)">Copy</button>
           </span>
         </div>
+
         <div class="row">
           <span class="label">Account Type</span>
           <span class="value">Current Account</span>
         </div>
+
       </div>
 
-      <div style="margin-top:18px;">
       <p class="important">Trust Registration No.: SRJ-4-00929-2025-26</p>
       <p><strong>DARPAN ID:</strong> KA/2025/0875375</p>
       <p><strong>PAN:</strong> AAFTR7868E</p>
-    </div>
     </section>
 
-    <section class="card">
-      <h2>Donate by UPI</h2>
-      <p>You may also use the following UPI ID, subject to availability through your UPI app.</p>
 
+    <!-- UPI + RAZORPAY -->
+    <section class="card">
+
+      <h2>Donate Online</h2>
+
+      <!-- UPI -->
       <div class="upi-box">
-        <div class="upi" id="upi">reboticsmedicalandeducationtrust@sbi</div>
+        <h3>Donate by UPI</h3>
+        <p>Use the following UPI ID in your preferred UPI application.</p>
+
+        <div class="upi">
+          reboticsmedicalandeducationtrust@sbi
+        </div>
+
         <br>
-        <button class="button" onclick="copyText('reboticsmedicalandeducationtrust@sbi', this)">
+
+        <button
+          class="donate-button"
+          type="button"
+          onclick="copyText('reboticsmedicalandeducationtrust@sbi', this)">
           Copy UPI ID
         </button>
       </div>
 
-      <h3>Before you donate</h3>
+
+      <!-- RAZORPAY -->
+      <div class="razorpay-box">
+        <h3>Donate Securely Online</h3>
+
+        <p>
+          You can make an online contribution through our Razorpay payment page.
+        </p>
+
+        <a
+          class="donate-button razorpay-button"
+          href="https://rzp.io/rzp/rebotics"
+          target="_blank"
+          rel="noopener noreferrer">
+          ❤️ Donate Online
+        </a>
+
+        <p class="small">
+          You will be redirected to the Razorpay payment page.
+        </p>
+      </div>
+
+      <h3>Before You Donate</h3>
+
       <ul>
         <li>Confirm the beneficiary name before payment.</li>
         <li>Keep your transaction/reference number for your records.</li>
-        <li>Do not share your UPI PIN, OTP, card PIN or banking password with anyone.</li>
+        <li>Never share your UPI PIN, OTP, card PIN or banking password.</li>
       </ul>
 
       <p><strong>80G:</strong> Not available at present.</p>
 
-      <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_TVXcD3VtV5Hoij/view" data-text="Pay Now" data-color="#528FF0" data-size="medium">
-  <script>
-    (function(){
-      var d=document; var x=!d.getElementById('razorpay-embed-btn-js')
-      if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js';
-      s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__'];
-      rzp && rzp.init && rzp.init()}})();
-  </script>
-</div>
-    <div class="online-donation">
-  <h2>Donate Online</h2>
-  <p>
-    Make a secure online contribution through our Razorpay donation page.
-  </p>
-
-  <a
-    href="https://rzp.io/rzp/rebotics"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="donate-button">
-    ❤️ Donate Online
-  </a>
-
-  <p class="payment-note">
-    You will be redirected to Razorpay's secure payment page.
-  </p>
-</div>
     </section>
+
   </div>
 
+
+  <!-- ABOUT CONTRIBUTIONS -->
   <section class="card" style="margin-top:22px;">
     <h2>About Contributions</h2>
+
     <p>
       Contributions are intended to support the activities and initiatives of
-      Rebotics Medical and Education Trust. Please retain your payment receipt
+      Rebotics Medical & Education Trust. Please retain your payment receipt
       or transaction reference for your records.
     </p>
+
     <p>
-      For donation-related assistance or acknowledgement, please contact the Trust
-      through the official contact details published on
+      For donation-related assistance or acknowledgement, please contact the
+      Trust through the official contact details published on
       <a href="https://medical.rebotics.in/">medical.rebotics.in</a>.
     </p>
   </section>
 
 </main>
 
+
 <footer>
-  <div>© 2026 Rebotics Medical and Education Trust. All rights reserved.</div>
+  <div>© 2026 Rebotics Medical & Education Trust. All rights reserved.</div>
+
   <div style="margin-top:8px;">
     Registration No. SRJ-4-00929-2025-26 ·
+    DARPAN ID: KA/2025/0875375 ·
     <a href="https://medical.rebotics.in/">medical.rebotics.in</a>
   </div>
 </footer>
 
+
 <script>
   function copyText(text, button) {
-    navigator.clipboard.writeText(text).then(function() {
-      const old = button.textContent;
-      button.textContent = "Copied!";
-      setTimeout(function() { button.textContent = old; }, 1500);
-    }).catch(function() {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(function () {
+        showCopied(button);
+      }).catch(function () {
+        fallbackCopy(text, button);
+      });
+    } else {
+      fallbackCopy(text, button);
+    }
+  }
+
+  function fallbackCopy(text, button) {
+    var input = document.createElement("textarea");
+    input.value = text;
+    input.style.position = "fixed";
+    input.style.opacity = "0";
+    document.body.appendChild(input);
+    input.focus();
+    input.select();
+
+    try {
+      document.execCommand("copy");
+      showCopied(button);
+    } catch (e) {
       alert("Copy failed. Please copy the details manually.");
-    });
+    }
+
+    document.body.removeChild(input);
+  }
+
+  function showCopied(button) {
+    var original = button.textContent;
+    button.textContent = "Copied!";
+    setTimeout(function () {
+      button.textContent = original;
+    }, 1500);
   }
 </script>
 
